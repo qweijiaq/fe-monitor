@@ -1,0 +1,31 @@
+{
+  "name": "wj-fe-monitor-web",
+  "version": "0.0.2",
+  "description": "GopherMonitor--前端稳定性监控 Web 监控",
+  "main": "dist/index.global.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "scripts": {
+    "build": "wj-fe-bundle src/index.ts --format iife,cjs,esm --dts --minify --global-name wjFeMonitor",
+    "clean": "rimraf dist node_modules"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "wj-fe",
+    "monitor",
+    "web"
+  ],
+  "author": "Pony Wei",
+  "license": "ISC",
+  "devDependencies": {
+    "wj-fe-bundle": "^1.4.1"
+  },
+  "dependencies": {
+    "wj-fe-monitor-browser": "workspace:^",
+    "wj-fe-monitor-react": "workspace:^",
+    "wj-fe-monitor-vue": "workspace:^"
+  }
+}
